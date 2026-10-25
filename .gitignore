@@ -1,0 +1,19 @@
+.env
+logs/
+var/
+node_modules/
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
+dist/
+setup/check-report.txt
+
+.runtime/
+.setup-tools/
+
+# Generated local task/report artifacts
+run/reports/
+run/tasks/
+run/stop-keepalive
+/HTTP

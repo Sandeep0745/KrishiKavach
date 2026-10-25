@@ -1,0 +1,19 @@
+[project]
+name = "ghante72"
+version = "0.2.0"
+description = "72 Ghante - agents that call storm-hit farmers and file their crop-loss intimation in time"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "starlette>=0.40",
+  "uvicorn>=0.30",
+  "jinja2>=3.1",
+  "python-multipart>=0.0.9",
+  "mcp>=2.2,<3",
+  "numpy>=2.0",
+]
+
+[project.optional-dependencies]
+s1 = ["torch>=2.3", "transformers>=4.44", "laya>=0.3"]
+
+[tool.uv]
+package = false
