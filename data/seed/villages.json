@@ -1,0 +1,110 @@
+[
+ {
+  "id": "V01",
+  "name": "Khajuriya Kalan",
+  "tehsil": "Ashta",
+  "district": "Sehore",
+  "state": "Madhya Pradesh",
+  "lat": 23.02723,
+  "lon": 76.73171
+ },
+ {
+  "id": "V02",
+  "name": "Bhanwra",
+  "tehsil": "Ashta",
+  "district": "Sehore",
+  "state": "Madhya Pradesh",
+  "lat": 23.00282,
+  "lon": 76.74538
+ },
+ {
+  "id": "V03",
+  "name": "Jatakheda",
+  "tehsil": "Ashta",
+  "district": "Sehore",
+  "state": "Madhya Pradesh",
+  "lat": 23.04442,
+  "lon": 76.70634
+ },
+ {
+  "id": "V04",
+  "name": "Pipliya Mira",
+  "tehsil": "Ashta",
+  "district": "Sehore",
+  "state": "Madhya Pradesh",
+  "lat": 23.05527,
+  "lon": 76.75026
+ },
+ {
+  "id": "V05",
+  "name": "Lasudiya Khas",
+  "tehsil": "Ashta",
+  "district": "Sehore",
+  "state": "Madhya Pradesh",
+  "lat": 22.9784,
+  "lon": 76.69853
+ },
+ {
+  "id": "V06",
+  "name": "Semli Jadid",
+  "tehsil": "Ashta",
+  "district": "Sehore",
+  "state": "Madhya Pradesh",
+  "lat": 23.07245,
+  "lon": 76.76783
+ },
+ {
+  "id": "V07",
+  "name": "Dhamanda",
+  "tehsil": "Ashta",
+  "district": "Sehore",
+  "state": "Madhya Pradesh",
+  "lat": 22.96302,
+  "lon": 76.77271
+ },
+ {
+  "id": "V08",
+  "name": "Bagdawda",
+  "tehsil": "Ashta",
+  "district": "Sehore",
+  "state": "Madhya Pradesh",
+  "lat": 23.08692,
+  "lon": 76.68291
+ },
+ {
+  "id": "V09",
+  "name": "Mogra Ram",
+  "tehsil": "Ichhawar",
+  "district": "Sehore",
+  "state": "Madhya Pradesh",
+  "lat": 23.03899,
+  "lon": 76.8098
+ },
+ {
+  "id": "V10",
+  "name": "Arniya Gazi",
+  "tehsil": "Ichhawar",
+  "district": "Sehore",
+  "state": "Madhya Pradesh",
+  "lat": 23.09778,
+  "lon": 76.80101
+ },
+ {
+  "id": "V11",
+  "name": "Hirapur Kheda",
+  "tehsil": "Ichhawar",
+  "district": "Sehore",
+  "state": "Madhya Pradesh",
+  "lat": 22.97297,
+  "lon": 76.83322
+ },
+ {
+  "id": "V12",
+  "name": "Chandbad Jagir",
+  "tehsil": "Sehore",
+  "district": "Sehore",
+  "state": "Madhya Pradesh",
+  "lat": 23.0824,
+  "lon": 76.83127
+ }
+]
