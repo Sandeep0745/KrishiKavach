@@ -1,0 +1,5 @@
+[
+ {"crop": "wheat", "district": "Sehore", "market": "Ashta", "modal_price_inr_per_quintal": 2425, "typical_yield_quintal_per_ha": 32, "date": "2026-03-11", "note": "Illustrative fixture value, not a live quote"},
+ {"crop": "gram", "district": "Sehore", "market": "Ashta", "modal_price_inr_per_quintal": 5650, "typical_yield_quintal_per_ha": 11, "date": "2026-03-11", "note": "Illustrative fixture value, not a live quote"},
+ {"crop": "soybean", "district": "Sehore", "market": "Sehore", "modal_price_inr_per_quintal": 4890, "typical_yield_quintal_per_ha": 12, "date": "2026-03-11", "note": "Illustrative fixture value, not a live quote"}
+]
