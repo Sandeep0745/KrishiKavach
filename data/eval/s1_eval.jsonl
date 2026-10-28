@@ -1,0 +1,67 @@
+{"decision": "ROUTE", "state": {"utterance": "Yes, speaking."}, "expected": {"intent": "yes"}}
+{"decision": "ROUTE", "state": {"utterance": "Yes, there is a lot of damage."}, "expected": {"intent": "yes"}}
+{"decision": "ROUTE", "state": {"utterance": "Hail fell, the whole crop is flattened."}, "expected": {"intent": "gives_details"}}
+{"decision": "ROUTE", "state": {"utterance": "Around half past three in the afternoon."}, "expected": {"intent": "gives_details"}}
+{"decision": "ROUTE", "state": {"utterance": "More than half the field is ruined."}, "expected": {"intent": "gives_details"}}
+{"decision": "ROUTE", "state": {"utterance": "The crop was standing, harvest was still left."}, "expected": {"intent": "gives_details"}}
+{"decision": "ROUTE", "state": {"utterance": "When will I get the money?"}, "expected": {"intent": "asks_question"}}
+{"decision": "ROUTE", "state": {"utterance": "No."}, "expected": {"intent": "no"}}
+{"decision": "ROUTE", "state": {"utterance": "I want to talk to a person."}, "expected": {"intent": "wants_human"}}
+{"decision": "ROUTE", "state": {"utterance": "Yes, please do it."}, "expected": {"intent": "yes"}}
+{"decision": "ROUTE", "state": {"utterance": "No, wrong number."}, "expected": {"intent": "wrong_person"}}
+{"decision": "ROUTE", "state": {"utterance": "No, the crop is fine."}, "expected": {"intent": "no"}}
+{"decision": "ROUTE", "state": {"utterance": "No, don't do it now."}, "expected": {"intent": "no"}}
+{"decision": "ROUTE", "state": {"utterance": "Yes ji, full damage happened."}, "expected": {"intent": "yes"}}
+{"decision": "ROUTE", "state": {"utterance": "When will the surveyor come?"}, "expected": {"intent": "asks_question"}}
+{"decision": "ROUTE", "state": {"utterance": "Yes, that is the field."}, "expected": {"intent": "yes"}}
+{"decision": "ROUTE", "state": {"utterance": "Yes sir."}, "expected": {"intent": "yes"}}
+{"decision": "ROUTE", "state": {"utterance": "Yes yes, that's the one."}, "expected": {"intent": "yes"}}
+{"decision": "ROUTE", "state": {"utterance": "Okay, do it."}, "expected": {"intent": "yes"}}
+{"decision": "ROUTE", "state": {"utterance": "No, nothing happened."}, "expected": {"intent": "no"}}
+{"decision": "ROUTE", "state": {"utterance": "No no."}, "expected": {"intent": "no"}}
+{"decision": "ROUTE", "state": {"utterance": "The whole field is destroyed, nothing is left."}, "expected": {"intent": "gives_details"}}
+{"decision": "ROUTE", "state": {"utterance": "Connect me to some officer."}, "expected": {"intent": "wants_human"}}
+{"decision": "ROUTE", "state": {"utterance": "Who are you? No Ramlal lives here."}, "expected": {"intent": "wrong_person"}}
+{"decision": "ROUTE", "state": {"utterance": "Hail fell around four in the evening."}, "expected": {"intent": "gives_details"}}
+{"decision": "ROUTE", "state": {"utterance": "Will this cost money?"}, "expected": {"intent": "asks_question"}}
+{"decision": "ROUTE", "state": {"utterance": "Hello? I can't hear you."}, "expected": {"intent": "unclear"}}
+{"decision": "ROUTE", "state": {"utterance": "Hey wait, the cow got loose."}, "expected": {"intent": "unclear"}}
+{"decision": "ROUTE", "state": {"utterance": "Not a machine, I want to talk to a human."}, "expected": {"intent": "wants_human"}}
+{"decision": "ROUTE", "state": {"utterance": "This is not my number, it's wrong."}, "expected": {"intent": "wrong_person"}}
+{"decision": "PERIL", "state": {"cause_text": "Hail fell, the wheat is completely flattened."}, "expected": {"peril": "hailstorm"}}
+{"decision": "PERIL", "state": {"cause_text": "Insects got into the crop."}, "expected": {"peril": "not_covered"}}
+{"decision": "PERIL", "state": {"cause_text": "Water has filled the field."}, "expected": {"peril": "inundation"}}
+{"decision": "PERIL", "state": {"cause_text": "The cut crop got wet in the rain."}, "expected": {"peril": "unseasonal_rain"}}
+{"decision": "PERIL", "state": {"cause_text": "Very big hailstones fell."}, "expected": {"peril": "hailstorm"}}
+{"decision": "PERIL", "state": {"cause_text": "Nilgai ate the crop."}, "expected": {"peril": "not_covered"}}
+{"decision": "PERIL", "state": {"cause_text": "Everything is finished because of the hailstorm."}, "expected": {"peril": "hailstorm"}}
+{"decision": "PERIL", "state": {"cause_text": "Caterpillars attacked."}, "expected": {"peril": "not_covered"}}
+{"decision": "PERIL", "state": {"cause_text": "Flood water entered."}, "expected": {"peril": "inundation"}}
+{"decision": "PERIL", "state": {"cause_text": "Lightning struck and the field burned."}, "expected": {"peril": "natural_fire"}}
+{"decision": "PERIL", "state": {"cause_text": "After cutting, rain poured and everything got wet."}, "expected": {"peril": "unseasonal_rain"}}
+{"decision": "PERIL", "state": {"cause_text": "The crop died in the drought."}, "expected": {"peril": "not_covered"}}
+{"decision": "TRIAGE", "state": {"crop": "wheat", "crop_stage": "close to harvest", "hail_intensity": "severe", "distance_km": 1.4}, "expected": {"damage_likelihood": "high"}}
+{"decision": "TRIAGE", "state": {"crop": "wheat", "crop_stage": "close to harvest", "hail_intensity": "severe", "distance_km": 3.2}, "expected": {"damage_likelihood": "high"}}
+{"decision": "TRIAGE", "state": {"crop": "wheat", "crop_stage": "close to harvest", "hail_intensity": "severe", "distance_km": 5.0}, "expected": {"damage_likelihood": "high"}}
+{"decision": "TRIAGE", "state": {"crop": "wheat", "crop_stage": "close to harvest", "hail_intensity": "moderate", "distance_km": 5.1}, "expected": {"damage_likelihood": "medium"}}
+{"decision": "TRIAGE", "state": {"crop": "wheat", "crop_stage": "close to harvest", "hail_intensity": "moderate", "distance_km": 7.6}, "expected": {"damage_likelihood": "medium"}}
+{"decision": "TRIAGE", "state": {"crop": "wheat", "crop_stage": "close to harvest", "hail_intensity": "moderate", "distance_km": 8.4}, "expected": {"damage_likelihood": "medium"}}
+{"decision": "TRIAGE", "state": {"crop": "wheat", "crop_stage": "close to harvest", "hail_intensity": "moderate", "distance_km": 9.4}, "expected": {"damage_likelihood": "medium"}}
+{"decision": "TRIAGE", "state": {"crop": "wheat", "crop_stage": "close to harvest", "hail_intensity": "light", "distance_km": 12.0}, "expected": {"damage_likelihood": "low"}}
+{"decision": "TRIAGE", "state": {"crop": "wheat", "crop_stage": "close to harvest", "hail_intensity": "light", "distance_km": 12.7}, "expected": {"damage_likelihood": "low"}}
+{"decision": "TRIAGE", "state": {"crop": "wheat", "crop_stage": "close to harvest", "hail_intensity": "light", "distance_km": 13.3}, "expected": {"damage_likelihood": "low"}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 70, "edge_label": "hail_damage", "edge_confidence": 0.82, "hail": true, "precipitation_mm": 24, "wind_gust_kmh": 78, "distance_from_plot_m": 120, "minutes_from_storm": 5}, "expected": {"evidence_consistent": true}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 45, "edge_label": "hail_damage", "edge_confidence": 0.71, "hail": true, "precipitation_mm": 24, "wind_gust_kmh": 78, "distance_from_plot_m": 300, "minutes_from_storm": 5}, "expected": {"evidence_consistent": true}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 90, "edge_label": "hail_damage", "edge_confidence": 0.82, "hail": true, "precipitation_mm": 24, "wind_gust_kmh": 78, "distance_from_plot_m": 120, "minutes_from_storm": 20}, "expected": {"evidence_consistent": true}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 70, "edge_label": "lodged", "edge_confidence": 0.66, "hail": true, "precipitation_mm": 24, "wind_gust_kmh": 78, "distance_from_plot_m": 120, "minutes_from_storm": 5}, "expected": {"evidence_consistent": true}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 70, "edge_label": "hail_damage", "edge_confidence": 0.82, "hail": true, "precipitation_mm": 12, "wind_gust_kmh": 55, "distance_from_plot_m": 40, "minutes_from_storm": 5}, "expected": {"evidence_consistent": true}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 60, "edge_label": "hail_damage", "edge_confidence": 0.82, "hail": true, "precipitation_mm": 24, "wind_gust_kmh": 78, "distance_from_plot_m": 120, "minutes_from_storm": -5}, "expected": {"evidence_consistent": true}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 70, "edge_label": "hail_damage", "edge_confidence": 0.9, "hail": true, "precipitation_mm": 24, "wind_gust_kmh": 78, "distance_from_plot_m": 800, "minutes_from_storm": 5}, "expected": {"evidence_consistent": true}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 70, "edge_label": "healthy", "edge_confidence": 0.85, "hail": true, "precipitation_mm": 24, "wind_gust_kmh": 78, "distance_from_plot_m": 120, "minutes_from_storm": 5}, "expected": {"evidence_consistent": false}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 70, "edge_label": "hail_damage", "edge_confidence": 0.82, "hail": false, "precipitation_mm": 0, "wind_gust_kmh": 10, "distance_from_plot_m": 120, "minutes_from_storm": 5}, "expected": {"evidence_consistent": false}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 70, "edge_label": "hail_damage", "edge_confidence": 0.82, "hail": true, "precipitation_mm": 24, "wind_gust_kmh": 78, "distance_from_plot_m": 15000, "minutes_from_storm": 5}, "expected": {"evidence_consistent": false}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 70, "edge_label": "not_a_crop", "edge_confidence": 0.9, "hail": true, "precipitation_mm": 24, "wind_gust_kmh": 78, "distance_from_plot_m": 120, "minutes_from_storm": 5}, "expected": {"evidence_consistent": false}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 100, "edge_label": "healthy", "edge_confidence": 0.9, "hail": true, "precipitation_mm": 24, "wind_gust_kmh": 78, "distance_from_plot_m": 120, "minutes_from_storm": 5}, "expected": {"evidence_consistent": false}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 70, "edge_label": "hail_damage", "edge_confidence": 0.82, "hail": false, "precipitation_mm": 0, "wind_gust_kmh": 8, "distance_from_plot_m": 120, "minutes_from_storm": 600}, "expected": {"evidence_consistent": false}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 70, "edge_label": "waterlogged", "edge_confidence": 0.82, "hail": true, "precipitation_mm": 24, "wind_gust_kmh": 78, "distance_from_plot_m": 40000, "minutes_from_storm": 5}, "expected": {"evidence_consistent": false}}
+{"decision": "VERIFY", "state": {"peril": "hailstorm", "damage_pct": 70, "edge_label": "healthy", "edge_confidence": 0.75, "hail": false, "precipitation_mm": 0, "wind_gust_kmh": 78, "distance_from_plot_m": 120, "minutes_from_storm": 5}, "expected": {"evidence_consistent": false}}

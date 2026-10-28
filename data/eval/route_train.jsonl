@@ -1,0 +1,151 @@
+{"text": "yes", "label": "yes"}
+{"text": "yeah", "label": "yes"}
+{"text": "yes sir", "label": "yes"}
+{"text": "haan yes", "label": "yes"}
+{"text": "yes ji", "label": "yes"}
+{"text": "yes, absolutely", "label": "yes"}
+{"text": "absolutely", "label": "yes"}
+{"text": "okay", "label": "yes"}
+{"text": "that's right", "label": "yes"}
+{"text": "yes, that's right", "label": "yes"}
+{"text": "correct", "label": "yes"}
+{"text": "yes it happened", "label": "yes"}
+{"text": "yes, it's me", "label": "yes"}
+{"text": "yes, speaking", "label": "yes"}
+{"text": "yes, this is the one", "label": "yes"}
+{"text": "yes, same field", "label": "yes"}
+{"text": "yes, go ahead", "label": "yes"}
+{"text": "please do it", "label": "yes"}
+{"text": "okay, do it", "label": "yes"}
+{"text": "yes okay", "label": "yes"}
+{"text": "mm yes", "label": "yes"}
+{"text": "yes yes", "label": "yes"}
+{"text": "yes, exactly right", "label": "yes"}
+{"text": "yes, there is damage", "label": "yes"}
+{"text": "sure", "label": "yes"}
+{"text": "yes please", "label": "yes"}
+{"text": "yes, there was damage", "label": "yes"}
+{"text": "yes, I am Ramlal speaking", "label": "yes"}
+{"text": "no", "label": "no"}
+{"text": "nah", "label": "no"}
+{"text": "no sir", "label": "no"}
+{"text": "no ji", "label": "no"}
+{"text": "no brother", "label": "no"}
+{"text": "not at all", "label": "no"}
+{"text": "no, it didn't", "label": "no"}
+{"text": "no, nothing", "label": "no"}
+{"text": "it's not like that", "label": "no"}
+{"text": "no, not that", "label": "no"}
+{"text": "don't do it", "label": "no"}
+{"text": "not now", "label": "no"}
+{"text": "leave it", "label": "no"}
+{"text": "no, leave it", "label": "no"}
+{"text": "no need", "label": "no"}
+{"text": "no no", "label": "no"}
+{"text": "no, everything is fine", "label": "no"}
+{"text": "no damage happened", "label": "no"}
+{"text": "no, the crop is safe", "label": "no"}
+{"text": "no, it's a different field", "label": "no"}
+{"text": "no, don't do it", "label": "no"}
+{"text": "no, don't do it now", "label": "no"}
+{"text": "no, our crop is fine", "label": "no"}
+{"text": "no, nothing got spoiled", "label": "no"}
+{"text": "hail fell", "label": "gives_details"}
+{"text": "there was a hailstorm yesterday", "label": "gives_details"}
+{"text": "a lot of hail came down", "label": "gives_details"}
+{"text": "the whole crop has fallen", "label": "gives_details"}
+{"text": "the wheat is lying flat on the ground", "label": "gives_details"}
+{"text": "half the field is ruined", "label": "gives_details"}
+{"text": "around sixty percent damage", "label": "gives_details"}
+{"text": "everything is gone completely", "label": "gives_details"}
+{"text": "only a little damage", "label": "gives_details"}
+{"text": "around four o'clock in the evening", "label": "gives_details"}
+{"text": "hail fell at three o'clock", "label": "gives_details"}
+{"text": "it happened yesterday afternoon", "label": "gives_details"}
+{"text": "the crop was cut and kept in the field", "label": "gives_details"}
+{"text": "it was a standing crop", "label": "gives_details"}
+{"text": "harvesting had not happened yet", "label": "gives_details"}
+{"text": "heavy rain came with a strong wind", "label": "gives_details"}
+{"text": "water filled up in the field", "label": "gives_details"}
+{"text": "two bigha is damaged", "label": "gives_details"}
+{"text": "all the ears are broken", "label": "gives_details"}
+{"text": "the grain has fallen off", "label": "gives_details"}
+{"text": "less than half is damaged", "label": "gives_details"}
+{"text": "a storm came at night", "label": "gives_details"}
+{"text": "seventy percent is spoiled", "label": "gives_details"}
+{"text": "around half past two in the afternoon", "label": "gives_details"}
+{"text": "three quarters of the field is destroyed", "label": "gives_details"}
+{"text": "the crop was ripe and standing", "label": "gives_details"}
+{"text": "how much money will I get?", "label": "asks_question"}
+{"text": "when will the money come?", "label": "asks_question"}
+{"text": "when will the survey happen?", "label": "asks_question"}
+{"text": "who will come to check?", "label": "asks_question"}
+{"text": "is there any fee for this?", "label": "asks_question"}
+{"text": "what do I have to do?", "label": "asks_question"}
+{"text": "what papers are needed?", "label": "asks_question"}
+{"text": "where are you calling from?", "label": "asks_question"}
+{"text": "which company is this call from?", "label": "asks_question"}
+{"text": "do I have to go to the bank?", "label": "asks_question"}
+{"text": "how do I send the photo?", "label": "asks_question"}
+{"text": "how many days will it take?", "label": "asks_question"}
+{"text": "will I get the full amount?", "label": "asks_question"}
+{"text": "is Aadhaar card needed?", "label": "asks_question"}
+{"text": "where will I get the number?", "label": "asks_question"}
+{"text": "is this really from the government?", "label": "asks_question"}
+{"text": "what if the surveyor doesn't come?", "label": "asks_question"}
+{"text": "how will I get the claim?", "label": "asks_question"}
+{"text": "when will I get compensation?", "label": "asks_question"}
+{"text": "when will the officer come to see the field?", "label": "asks_question"}
+{"text": "let me talk to a person", "label": "wants_human"}
+{"text": "I want to talk to an officer", "label": "wants_human"}
+{"text": "connect me to the sahib", "label": "wants_human"}
+{"text": "I don't want to talk to a machine", "label": "wants_human"}
+{"text": "is there any human there", "label": "wants_human"}
+{"text": "give the phone to the manager", "label": "wants_human"}
+{"text": "connect me to a senior officer", "label": "wants_human"}
+{"text": "I don't want to talk to a robot", "label": "wants_human"}
+{"text": "I want to speak to someone from the office", "label": "wants_human"}
+{"text": "connect me to a staff member", "label": "wants_human"}
+{"text": "put a real person on the line", "label": "wants_human"}
+{"text": "I will only talk to an officer", "label": "wants_human"}
+{"text": "please connect me to a person", "label": "wants_human"}
+{"text": "connect me to an agent", "label": "wants_human"}
+{"text": "I want to talk to customer care", "label": "wants_human"}
+{"text": "I will talk to the patwari", "label": "wants_human"}
+{"text": "I need to talk to a human", "label": "wants_human"}
+{"text": "please let me talk to some officer", "label": "wants_human"}
+{"text": "wrong number", "label": "wrong_person"}
+{"text": "you have dialled the wrong number", "label": "wrong_person"}
+{"text": "there is no Ramlal here", "label": "wrong_person"}
+{"text": "I am not Ramlal", "label": "wrong_person"}
+{"text": "this is not his number", "label": "wrong_person"}
+{"text": "he doesn't live here", "label": "wrong_person"}
+{"text": "no, I am his son speaking", "label": "wrong_person"}
+{"text": "he is not at home", "label": "wrong_person"}
+{"text": "this number belongs to someone else", "label": "wrong_person"}
+{"text": "there is nobody like that here", "label": "wrong_person"}
+{"text": "no brother, you called the wrong place", "label": "wrong_person"}
+{"text": "this is a shop's number", "label": "wrong_person"}
+{"text": "I am not a farmer", "label": "wrong_person"}
+{"text": "he has gone out, I am the neighbour", "label": "wrong_person"}
+{"text": "nobody by this name is here", "label": "wrong_person"}
+{"text": "no, your call went to the wrong number", "label": "wrong_person"}
+{"text": "which Ramlal? nobody by that name lives here", "label": "wrong_person"}
+{"text": "hello hello", "label": "unclear"}
+{"text": "I can't hear you", "label": "unclear"}
+{"text": "what did you say", "label": "unclear"}
+{"text": "say that again", "label": "unclear"}
+{"text": "hmm", "label": "unclear"}
+{"text": "hey listen", "label": "unclear"}
+{"text": "one minute", "label": "unclear"}
+{"text": "wait a bit", "label": "unclear"}
+{"text": "yes... that... I mean", "label": "unclear"}
+{"text": "the children are making noise", "label": "unclear"}
+{"text": "switch off the TV", "label": "unclear"}
+{"text": "bring the tea", "label": "unclear"}
+{"text": "hey who is it", "label": "unclear"}
+{"text": "I didn't understand", "label": "unclear"}
+{"text": "what", "label": "unclear"}
+{"text": "hello who", "label": "unclear"}
+{"text": "the network is bad", "label": "unclear"}
+{"text": "the voice is breaking", "label": "unclear"}

@@ -1,0 +1,56 @@
+{"text": "hail fell", "label": "hailstorm"}
+{"text": "hailstones came down", "label": "hailstorm"}
+{"text": "there was a hailstorm", "label": "hailstorm"}
+{"text": "big big hailstones fell", "label": "hailstorm"}
+{"text": "the crop was ruined by hail", "label": "hailstorm"}
+{"text": "balls of ice fell from the sky", "label": "hailstorm"}
+{"text": "hail came", "label": "hailstorm"}
+{"text": "the wheat fell because of the hail", "label": "hailstorm"}
+{"text": "damage from heavy hail", "label": "hailstorm"}
+{"text": "hailstones like stones fell", "label": "hailstorm"}
+{"text": "hail and a storm came", "label": "hailstorm"}
+{"text": "there was hail", "label": "hailstorm"}
+{"text": "water filled up in the field", "label": "inundation"}
+{"text": "a flood came", "label": "inundation"}
+{"text": "the crop drowned in water", "label": "inundation"}
+{"text": "river water entered the field", "label": "inundation"}
+{"text": "the field is waterlogged", "label": "inundation"}
+{"text": "the field has become a pond", "label": "inundation"}
+{"text": "water collected after heavy rain", "label": "inundation"}
+{"text": "the drain water flooded the field", "label": "inundation"}
+{"text": "the whole field is under water", "label": "inundation"}
+{"text": "water is not draining from the field", "label": "inundation"}
+{"text": "everything was washed away in the flood", "label": "inundation"}
+{"text": "rain fell on the cut crop", "label": "unseasonal_rain"}
+{"text": "the crop kept in the threshing floor got wet", "label": "unseasonal_rain"}
+{"text": "rain came after the harvest", "label": "unseasonal_rain"}
+{"text": "the crop kept for drying got spoiled in the rain", "label": "unseasonal_rain"}
+{"text": "unseasonal rain soaked the cut wheat", "label": "unseasonal_rain"}
+{"text": "we had cut it and then rain fell", "label": "unseasonal_rain"}
+{"text": "the harvested crop rotted in the rain", "label": "unseasonal_rain"}
+{"text": "the bundles got wet in the rain", "label": "unseasonal_rain"}
+{"text": "untimely rain came after harvesting", "label": "unseasonal_rain"}
+{"text": "the cut crop lying in the field got wet", "label": "unseasonal_rain"}
+{"text": "a fire broke out", "label": "natural_fire"}
+{"text": "lightning struck and started a fire", "label": "natural_fire"}
+{"text": "the field caught fire", "label": "natural_fire"}
+{"text": "the crop burned when lightning struck", "label": "natural_fire"}
+{"text": "the crop got burnt", "label": "natural_fire"}
+{"text": "everything turned to ash in the fire", "label": "natural_fire"}
+{"text": "fire started from a lightning strike", "label": "natural_fire"}
+{"text": "the wheat caught fire", "label": "natural_fire"}
+{"text": "the whole field burned", "label": "natural_fire"}
+{"text": "insects attacked", "label": "not_covered"}
+{"text": "the crop got a disease", "label": "not_covered"}
+{"text": "there was a drought", "label": "not_covered"}
+{"text": "no water so the crop dried up", "label": "not_covered"}
+{"text": "animals ate it", "label": "not_covered"}
+{"text": "stray cattle grazed it", "label": "not_covered"}
+{"text": "the crop was stolen", "label": "not_covered"}
+{"text": "wild boars dug up the field", "label": "not_covered"}
+{"text": "fungus attacked", "label": "not_covered"}
+{"text": "termites got in", "label": "not_covered"}
+{"text": "the fertiliser was bad", "label": "not_covered"}
+{"text": "the seed turned out bad", "label": "not_covered"}
+{"text": "a cow entered the field", "label": "not_covered"}
+{"text": "stem borer attacked", "label": "not_covered"}
