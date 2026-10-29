@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Step 1 of 3 — FasalClaim Sandbox{% endblock %}
+{% block body %}
+<div class="card">
+<h1>Farmer and policy</h1><h2>Page 1 of 3</h2>
+<ol class="steps"><li class="on">1 Farmer and policy</li><li class="">2 Loss details</li><li class="">3 Evidence and declaration</li></ol>
+{% if errors %}<div class="errors" id="errors">{% for e in errors %}<div>{{ e }}</div>{% endfor %}</div>{% endif %}
+<form method="post" action="/claim/new/step1">
+<div class="field"><label for="application_no">Application number</label><input id="application_no" name="application_no" type="text" value="{{ data.application_no or '' }}" required></div>
+<div class="field"><label for="farmer_name">Farmer name</label><input id="farmer_name" name="farmer_name" type="text" value="{{ data.farmer_name or '' }}" required></div>
+<div class="field"><label for="mobile">Mobile number</label><input id="mobile" name="mobile" type="tel" value="{{ data.mobile or '' }}" required></div>
+<div class="field"><label for="state">State</label><select id="state" name="state" required><option value="">Select</option>{% for o in opt.states %}<option value="{{ o }}" {% if data.state == o %}selected{% endif %}>{{ o }}</option>{% endfor %}</select></div>
+<div class="field"><label for="district">District</label><select id="district" name="district" required><option value="">Select</option>{% for o in opt.districts %}<option value="{{ o }}" {% if data.district == o %}selected{% endif %}>{{ o }}</option>{% endfor %}</select></div>
+<div class="field"><label for="tehsil">Tehsil</label><input id="tehsil" name="tehsil" type="text" value="{{ data.tehsil or '' }}" required></div>
+<div class="field"><label for="village">Village</label><input id="village" name="village" type="text" value="{{ data.village or '' }}" required></div>
+<button id="next" type="submit">Next</button>
+</form>
+</div>
+{% endblock %}

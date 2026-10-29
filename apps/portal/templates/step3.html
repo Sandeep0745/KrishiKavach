@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Step 3 of 3 — FasalClaim Sandbox{% endblock %}
+{% block body %}
+<div class="card">
+<h1>Evidence and declaration</h1><h2>Page 3 of 3</h2>
+<ol class="steps"><li class="">1 Farmer and policy</li><li class="">2 Loss details</li><li class="on">3 Evidence and declaration</li></ol>
+{% if errors %}<div class="errors" id="errors">{% for e in errors %}<div>{{ e }}</div>{% endfor %}</div>{% endif %}
+<form method="post" action="/claim/{{ draft }}/step3" enctype="multipart/form-data">
+<div class="field"><label for="photo">Photo of the damaged crop</label><input id="photo" name="photo" type="file" accept="image/*" required></div>
+<div class="field"><label for="gps_lat">GPS latitude</label><input id="gps_lat" name="gps_lat" type="number" value="{{ data.gps_lat or '' }}" step="any"></div>
+<div class="field"><label for="gps_lon">GPS longitude</label><input id="gps_lon" name="gps_lon" type="number" value="{{ data.gps_lon or '' }}" step="any"></div>
+<div class="field"><label for="submitted_by">Submitted by</label><select id="submitted_by" name="submitted_by" required><option value="">Select</option>{% for o in opt.submitters %}<option value="{{ o }}" {% if data.submitted_by == o %}selected{% endif %}>{{ o }}</option>{% endfor %}</select></div>
+<div class="field check"><input id="declaration" name="declaration" type="checkbox" value="on" required><label for="declaration">I declare that the details given are true to the best of my knowledge.</label></div>
+<button id="submit" type="submit">Submit report</button>
+</form>
+</div>
+{% endblock %}

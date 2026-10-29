@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Step 2 of 3 — FasalClaim Sandbox{% endblock %}
+{% block body %}
+<div class="card">
+<h1>Loss details</h1><h2>Page 2 of 3</h2>
+<ol class="steps"><li class="">1 Farmer and policy</li><li class="on">2 Loss details</li><li class="">3 Evidence and declaration</li></ol>
+{% if errors %}<div class="errors" id="errors">{% for e in errors %}<div>{{ e }}</div>{% endfor %}</div>{% endif %}
+<form method="post" action="/claim/{{ draft }}/step2">
+<div class="field"><label for="season">Season</label><select id="season" name="season" required><option value="">Select</option>{% for o in opt.seasons %}<option value="{{ o }}" {% if data.season == o %}selected{% endif %}>{{ o }}</option>{% endfor %}</select></div>
+<div class="field"><label for="crop">Crop</label><select id="crop" name="crop" required><option value="">Select</option>{% for o in opt.crops %}<option value="{{ o }}" {% if data.crop == o %}selected{% endif %}>{{ o }}</option>{% endfor %}</select></div>
+<div class="field"><label for="khasra_no">Khasra (survey) number</label><input id="khasra_no" name="khasra_no" type="text" value="{{ data.khasra_no or '' }}" required></div>
+<div class="field"><label for="insured_area_ha">Insured area (hectares)</label><input id="insured_area_ha" name="insured_area_ha" type="number" value="{{ data.insured_area_ha or '' }}" step="0.01" min="0" required></div>
+<div class="field"><label for="loss_date">Date of loss</label><input id="loss_date" name="loss_date" type="date" value="{{ data.loss_date or '' }}" required></div>
+<div class="field"><label for="loss_time">Time of loss</label><input id="loss_time" name="loss_time" type="time" value="{{ data.loss_time or '' }}" required></div>
+<div class="field"><label for="cause_of_loss">Cause of loss</label><select id="cause_of_loss" name="cause_of_loss" required><option value="">Select</option>{% for o in opt.causes %}<option value="{{ o }}" {% if data.cause_of_loss == o %}selected{% endif %}>{{ o }}</option>{% endfor %}</select></div>
+<div class="field radio"><label>Crop stage</label>{% for o in opt.stages %}<div><input id="crop_stage_{{ loop.index }}" name="crop_stage" type="radio" value="{{ o }}" {% if data.crop_stage == o %}checked{% endif %} required><label for="crop_stage_{{ loop.index }}">{{ o }}</label></div>{% endfor %}</div>
+<div class="field"><label for="affected_area_ha">Affected area (hectares)</label><input id="affected_area_ha" name="affected_area_ha" type="number" value="{{ data.affected_area_ha or '' }}" step="0.01" min="0" required></div>
+<div class="field"><label for="damage_pct">Damage (percent)</label><input id="damage_pct" name="damage_pct" type="number" value="{{ data.damage_pct or '' }}" step="1" min="0" max="100" required></div>
+<div class="field"><label for="remarks">Remarks</label><textarea id="remarks" name="remarks">{{ data.remarks or '' }}</textarea></div>
+<button id="next" type="submit">Next</button>
+</form>
+</div>
+{% endblock %}
