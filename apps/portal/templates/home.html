@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="card">
+  <h1>Report a crop loss</h1>
+  <h2>A test portal for the 72 Ghante project</h2>
+  {% if message %}<div class="errors">{{ message }}</div>{% endif %}
+  <p>Use this form to report damage to an insured crop. The report has three short pages and ends with a reference number.</p>
+  <p><a class="btn" id="start" href="/claim/new/step1">Report crop loss</a></p>
+  <p class="muted"><a href="/admin/claims">View submitted reports</a></p>
+</div>
+{% endblock %}
