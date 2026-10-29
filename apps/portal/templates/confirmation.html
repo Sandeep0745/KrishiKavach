@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Report received — FasalClaim Sandbox{% endblock %}
+{% block body %}
+<div class="card">
+  <h1>Report received</h1>
+  <h2>Keep this reference number</h2>
+  <p class="ref"><span id="reference">{{ claim.reference }}</span></p>
+  <dl>
+    <dt>Farmer</dt><dd>{{ claim.farmer_name }}</dd>
+    <dt>Application number</dt><dd>{{ claim.application_no }}</dd>
+    <dt>Crop</dt><dd>{{ claim.crop }}, khasra {{ claim.khasra_no }}</dd>
+    <dt>Cause and time</dt><dd>{{ claim.cause_of_loss }}, {{ claim.loss_date }} {{ claim.loss_time }}</dd>
+    <dt>Damage</dt><dd>{{ claim.damage_pct }} percent, {{ claim.affected_area_ha }} ha</dd>
+    <dt>Submitted by</dt><dd>{{ claim.submitted_by }}</dd>
+  </dl>
+  <p class="muted">This is a sandbox. No real claim has been filed anywhere.</p>
+  <p><a href="/">Back to start</a></p>
+</div>
+{% endblock %}

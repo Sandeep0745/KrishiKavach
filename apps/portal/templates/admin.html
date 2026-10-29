@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Submitted reports — FasalClaim Sandbox{% endblock %}
+{% block body %}
+<div class="card">
+  <h1>Submitted reports</h1>
+  <h2><span id="total">{{ total }}</span> in total{% if total > 1000 %} (latest 1000 shown){% endif %}</h2>
+  <table>
+    <thead><tr><th>Reference</th><th>Farmer</th><th>Village</th><th>Cause</th><th>Damage</th><th>Via</th><th>Photo</th></tr></thead>
+    <tbody>
+    {% for c in claims %}
+      <tr><td><a href="/claim/confirmation/{{ c.reference }}">{{ c.reference }}</a></td><td>{{ c.farmer_name }}</td><td>{{ c.village }}</td>
+          <td>{{ c.cause_of_loss }}</td><td>{{ c.damage_pct }}%</td><td>{{ c.submitted_via }}</td><td>{{ "yes" if c.has_photo else "no" }}</td></tr>
+    {% else %}
+      <tr><td colspan="7" class="muted">No reports yet.</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
