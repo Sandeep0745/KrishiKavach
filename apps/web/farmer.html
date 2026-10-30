@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#16202e">
+<link rel="icon" href="data:,">
+<title>Crop Insurance Help</title>
+<link rel="stylesheet" href="/static/farmer.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-title">Crop Insurance Help</div>
+  <div class="bar-who" id="who"></div>
+  <div class="bar-status">
+    <span id="net" class="pill">Connecting</span>
+    <span id="model" class="pill">Photo check loading</span>
+  </div>
+</header>
+
+<main>
+  <section id="screen-start" class="screen">
+    <p class="lead">This is the farmer's phone. It will ring when a call comes in.</p>
+    <button id="btn-start" class="btn primary big">Turn on phone</button>
+    <p class="hint">The first time, it will ask for permission to use the microphone, camera and location.</p>
+  </section>
+
+  <section id="screen-idle" class="screen" hidden>
+    <p class="lead" id="idle-text">The phone is on. Waiting for a call.</p>
+    <ul id="cards" class="cards" aria-label="Messages"></ul>
+    <button id="btn-photo-idle" class="btn wide">Take photo</button>
+    <p class="hint" id="queue-note" hidden></p>
+  </section>
+
+  <section id="screen-ring" class="screen ring" hidden>
+    <div class="ring-icon" aria-hidden="true"></div>
+    <p class="caller" id="caller">Crop Insurance Help</p>
+    <p class="lead">Incoming call</p>
+    <div class="ring-actions">
+      <button id="btn-decline" class="btn round decline" aria-label="Decline call">Decline</button>
+      <button id="btn-accept" class="btn round accept" aria-label="Answer call">Answer</button>
+    </div>
+  </section>
+
+  <section id="screen-call" class="screen" hidden>
+    <p class="caller">Crop Insurance Help</p>
+    <p class="timer" id="timer">0:00</p>
+    <p class="lead" id="call-state">Connecting</p>
+    <button id="btn-photo-call" class="btn primary big">Take photo</button>
+    <div class="call-actions">
+      <button id="btn-mute" class="btn" aria-pressed="false">Mute</button>
+      <button id="btn-hangup" class="btn decline">End call</button>
+    </div>
+    <div id="audio-host" hidden></div>
+  </section>
+
+  <section id="screen-camera" class="screen camera" hidden>
+    <video id="video" playsinline muted></video>
+    <p class="lead on-video">Point the camera at the damaged crop</p>
+    <div class="camera-actions">
+      <button id="btn-camera-cancel" class="btn">Back</button>
+      <button id="btn-shutter" class="btn round shutter" aria-label="Take the photo"></button>
+      <label class="btn" for="file">Gallery</label>
+      <input id="file" type="file" accept="image/*" hidden>
+    </div>
+  </section>
+
+  <section id="screen-photo" class="screen" hidden>
+    <img id="thumb" class="thumb" alt="The photo you took">
+    <p class="label" id="photo-label">Checking</p>
+    <p class="hint" id="photo-detail"></p>
+    <p class="warn" id="photo-warn" hidden></p>
+    <div class="photo-actions">
+      <button id="btn-retake" class="btn">Retake</button>
+      <button id="btn-send" class="btn primary">Send</button>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">Demo. All data is fictional. <span id="foot-id"></span></footer>
+<script src="https://cdn.jsdelivr.net/npm/livekit-client@2.22.3/dist/livekit-client.umd.js" defer></script>
+<script type="module" src="/static/farmer.js"></script>
+</body>
+</html>
