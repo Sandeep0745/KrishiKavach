@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>72 Ghante — district view</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="screen">
+  <header class="top">
+    <div class="brand">72 Ghante</div>
+    <div class="place" id="place">Sehore, Madhya Pradesh</div>
+    <div class="simtime" id="simtime">—</div>
+    <div class="runstate" id="runstate" role="status"></div>
+    <div class="conn" id="conn" role="status">connecting</div>
+  </header>
+
+  <main class="grid">
+    <section class="map-wrap" aria-label="District map">
+      <svg id="map" viewBox="0 0 1000 720" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of insured farms and the storm footprint"></svg>
+      <p class="map-empty" id="map-empty">No storm yet. Farms appear here when one is detected.</p>
+      <ul class="notices" id="notices" hidden aria-label="Fallbacks in use"></ul>
+      <div class="banner" id="banner" hidden></div>
+
+      <aside class="hero" id="hero" hidden aria-label="Live call">
+        <div class="hero-head">
+          <span class="live-tag">LIVE</span>
+          <span id="hero-name">Live call</span>
+          <span class="stopwatch" id="hero-watch"></span>
+        </div>
+        <div class="hero-body">
+          <div class="transcript" id="transcript"></div>
+          <div class="hero-side">
+            <h3>Details collected</h3>
+            <ul class="slots" id="slots"></ul>
+            <h3>Evidence</h3>
+            <div class="evidence" id="evidence">Waiting for the photo.</div>
+            <h3>Filing</h3>
+            <div class="filing" id="filing">Not started.</div>
+          </div>
+        </div>
+        <div class="hero-result" id="hero-result" hidden></div>
+      </aside>
+    </section>
+
+    <section class="side">
+      <div class="clock" aria-label="Time left to report">
+        <div class="clock-num" id="clock-num">72 h 00 m</div>
+        <div class="clock-label">left to report the loss</div>
+        <section class="weather-watch" aria-label="Automatic crop-risk weather watch">
+          <div class="weather-head"><strong>Weather watch</strong><span id="weather-source">Checking</span></div>
+          <p id="weather-summary" role="status">Waiting for weather.</p>
+          <p id="weather-detail"></p>
+          <p id="weather-time"></p>
+          <div class="weather-controls"><button id="btn-weather-demo">Demo weather</button><button id="btn-weather-live">Live weather</button></div>
+          <a href="https://open-meteo.com/" target="_blank" rel="noopener">Weather data: Open-Meteo</a>
+          <span class="weather-note">Triggers a synthetic sandbox scenario.</span>
+        </section>
+        <div class="clock-bar"><div class="clock-fill" id="clock-fill"></div></div>
+      </div>
+
+      <div class="panel counts">
+        <h2>Farmers</h2>
+        <ul id="legend"></ul>
+      </div>
+
+      <div class="panel ticker">
+        <h2>Fast decisions <span class="count" id="s1-count"></span></h2>
+        <ol id="ticker"></ol>
+        <p class="empty" id="ticker-empty">Decisions made by the small models appear here with their confidence and time.</p>
+      </div>
+
+      <div class="panel tools">
+        <h2>Tool calls <span class="count" id="mcp-count"></span></h2>
+        <ol id="mcp"></ol>
+        <p class="empty" id="mcp-empty">Calls to the weather, registry and price servers appear here.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bottom">
+    <ol class="agents" id="agents" aria-label="Agents, in the order a claim passes through them"></ol>
+    <div class="truth" id="truth">Simulated farmers: 0. Live: 0.</div>
+    <div class="controls">
+      <button id="btn-start" data-key="s" title="The storm is on record: detect it, open the cases and start calling">Start storm</button>
+      <button id="btn-hero" data-key="h">Call hero</button>
+      <button id="btn-pause" data-key="p" disabled title="Pause or resume the simulated farmers">Pause</button>
+      <button id="btn-approve" data-key="a" hidden title="A person approves the live case that the checks sent to review">Approve as reviewer</button>
+      <button id="btn-retry" data-key="f" hidden title="Try to submit the live case's report again">Try filing again</button>
+      <button id="btn-live" data-key="l" disabled>Show live call</button>
+      <button id="btn-reset" data-key="r">Reset</button>
+    </div>
+  </footer>
+</div>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>
