@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Photo check test</title>
+<style>
+  body { margin: 0; padding: 16px; font: 16px/1.45 system-ui, "Segoe UI", sans-serif; background: #f2f5ee; color: #16202e; }
+  h1 { font-size: 22px; margin: 0 0 6px; }
+  p { margin: 6px 0; max-width: 70ch; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 12px 0; }
+  button, label.btn { font: 600 16px system-ui, sans-serif; padding: 10px 14px; border: 2px solid #cfd8cc; border-radius: 10px; background: #fff; color: #16202e; cursor: pointer; }
+  button:disabled { opacity: .5; }
+  #status { font-weight: 600; }
+  table { border-collapse: collapse; width: 100%; background: #fff; margin-top: 10px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #e1e6dd; font-size: 14px; vertical-align: middle; }
+  td img { width: 72px; height: 54px; object-fit: cover; border-radius: 4px; display: block; }
+  .ok { color: #1f8a4c; font-weight: 700; } .bad { color: #c8402f; font-weight: 700; }
+  #summary { font-size: 18px; font-weight: 700; margin-top: 12px; }
+</style>
+</head>
+<body>
+<h1>Photo check test (T0-4)</h1>
+<p>This page runs the same on-phone photo check as the farmer app. Open it on the demo phone, choose the sample photos, and read the result.
+Name each file after what it shows, for example <code>hail_damage_01.jpg</code>, <code>lodged_02.jpg</code>, <code>healthy_01.jpg</code>,
+<code>waterlogged_01.jpg</code>, <code>not_a_crop_01.jpg</code>. A file with another name is classified but not scored.</p>
+<div class="row">
+  <span id="status">Loading the model…</span>
+</div>
+<div class="row">
+  <label class="btn" for="files">Choose photos</label>
+  <input id="files" type="file" accept="image/*" multiple hidden>
+  <button id="speed" disabled>Run the speed test</button>
+</div>
+<div id="summary"></div>
+<table>
+  <thead><tr><th>Photo</th><th>File</th><th>Expected</th><th>Result</th><th>Confidence</th><th>Time</th></tr></thead>
+  <tbody id="rows"></tbody>
+</table>
+<script type="module">
+const LABELS = ["hail_damage", "waterlogged", "lodged", "healthy", "not_a_crop"];
+const $ = (id) => document.getElementById(id);
+const params = new URLSearchParams(location.search);
+const worker = new Worker("/static/edge-worker.js", { type: "module" });
+const jobs = new Map();
+let nextId = 0, scored = 0, correct = 0, times = [];
+worker.onmessage = (ev) => {
+  const m = ev.data;
+  if (m.type === "progress") $("status").textContent = `Loading the model… ${m.percent}%`;
+  else if (m.type === "ready") { $("status").textContent = `Model ready (${m.dtype}), loaded in ${(m.ms / 1000).toFixed(1)} s. It now works with no network.`; $("speed").disabled = false; window.__edge = m; }
+  else if (m.type === "error") { $("status").textContent = `The model could not be loaded: ${m.message}`; window.__edgeError = m.message; }
+  else if (m.type === "result" || m.type === "failed") { const done = jobs.get(m.id); jobs.delete(m.id); if (done) done(m); }
+};
+worker.postMessage({ type: "load", dtype: params.get("dtype") || undefined });
+function classify(blob) {
+  return new Promise((resolve) => { const id = ++nextId; jobs.set(id, resolve); worker.postMessage({ type: "classify", id, blob }); });
+}
+function expectedFrom(name) {
+  const lower = name.toLowerCase();
+  return LABELS.find((l) => lower.startsWith(l)) || null;
+}
+function cell(text, cls) { const td = document.createElement("td"); td.textContent = text; if (cls) td.className = cls; return td; }
+async function run(blob, name) {
+  const expected = expectedFrom(name);
+  const r = await classify(blob);
+  const tr = document.createElement("tr");
+  const pic = document.createElement("td");
+  const img = document.createElement("img"); img.src = URL.createObjectURL(blob); img.alt = ""; pic.append(img);
+  if (r.type === "failed") { tr.append(pic, cell(name), cell(expected || "not scored"), cell(`failed: ${r.message}`, "bad"), cell(""), cell("")); $("rows").append(tr); return; }
+  let cls = "";
+  if (expected) { scored += 1; if (r.label === expected) { correct += 1; cls = "ok"; } else cls = "bad"; }
+  times.push(r.ms);
+  tr.append(pic, cell(name), cell(expected || "not scored"), cell(r.label, cls), cell(`${Math.round(r.confidence * 100)}%`), cell(`${Math.round(r.ms)} ms`));
+  $("rows").append(tr);
+  const sorted = [...times].sort((a, b) => a - b);
+  const median = sorted[Math.floor(sorted.length / 2)];
+  $("summary").textContent = `${scored ? `${correct} of ${scored} correct (${Math.round(100 * correct / scored)}%). ` : ""}Median time ${Math.round(median)} ms, slowest ${Math.round(sorted[sorted.length - 1])} ms over ${times.length} photos.`;
+  window.__summary = { scored, correct, median, slowest: sorted[sorted.length - 1], n: times.length, last: r };
+}
+$("files").addEventListener("change", async (ev) => {
+  for (const file of ev.target.files) await run(file, file.name);
+  ev.target.value = "";
+});
+$("speed").addEventListener("click", async () => {
+  // a made-up picture, only to time the model on this device
+  $("speed").disabled = true;
+  for (let n = 0; n < 5; n++) {
+    const canvas = document.createElement("canvas"); canvas.width = 640; canvas.height = 480;
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = `hsl(${80 + n * 12}, 45%, 38%)`; ctx.fillRect(0, 0, 640, 480);
+    for (let i = 0; i < 600; i++) { ctx.fillStyle = `hsl(${70 + (i % 50)}, 50%, ${25 + (i % 30)}%)`; ctx.fillRect((i * 37) % 640, (i * 91) % 480, 6, 22); }
+    const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/jpeg", 0.85));
+    await run(blob, `speed_test_${n + 1}.jpg`);
+  }
+  $("speed").disabled = false;
+});
+</script>
+</body>
+</html>
