@@ -1,0 +1,10 @@
+72 Ghante key check - 2026-10-07T00:14:18
+
+Deepgram   status=200   ACCEPTED 
+Groq       status=200   ACCEPTED 
+           models: allam-2-7b, canopylabs/orpheus-arabic-saudi, canopylabs/orpheus-v1-english, meta-llama/llama-prompt-guard-2-22m, meta-llama/llama-prompt-guard-2-86m, openai/gpt-oss-120b, openai/gpt-oss-20b, openai/gpt-oss-safeguard-20b, qwen/qwen3.8-27b, whisper-large-v3, whisper-large-v3-turbo
+Gemini     status=200   ACCEPTED 
+           flash models: gemini-2.5-flash, gemini-2.5-flash-image, gemini-2.5-flash-lite, gemini-2.5-flash-preview-tts, gemini-3-flash-preview, gemini-3.1-flash-image, gemini-3.1-flash-image-preview, gemini-3.1-flash-lite, gemini-3.1-flash-lite-image, gemini-3.1-flash-lite-preview, gemini-3.1-flash-tts-preview, gemini-3.5-flash, gemini-3.5-flash-lite, gemini-3.6-flash, gemini-3.7-flash, gemini-3.8-flash, gemini-3.8-flash-lite-tts, gemini-3.8-flash-tts, gemini-flash-latest, gemini-flash-lite-latest, gemini-omni-1.1-flash, gemini-omni-flash-preview
+Sarvam     status=400   ACCEPTED {"error":{"message":"Either 'text' or 'inputs' must be provided","code":"invalid_request_error","request_id":"20261006_8a764a20-e9bc-49a4-82c5-3a7020b3c82b"}}
+LiveKit    MISSING: LIVEKIT_URL, LIVEKIT_API_SECRET
+Jev        none (Laya will be used)

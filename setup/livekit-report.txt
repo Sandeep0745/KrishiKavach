@@ -1,0 +1,4 @@
+LiveKit check
+URL host: project-x-1006-0v20fqxt.livekit.cloud
+Key starts with: APInwn... | secret length: 44
+status=200 ACCEPTED - URL, key and secret all match. Rooms now: 0
